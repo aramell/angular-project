@@ -1,2 +1,22 @@
 
 <datatable> </datatable>
+
+
+<div>
+    <mat-table [dataSource]="dataSource">
+        <ng-container matColumnDef="username">
+            <mat-header-cell *matHeaderCellDef> UserName</mat-header-cell>
+            <mat-cell *matCellDef="let user"> {{user.userName}}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="steps">
+            <mat-header-cell *matHeaderCellDef> Steps</mat-header-cell>
+            <mat-cell *matCellDef="let user"> {{user.steps}}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="heartRate">
+            <mat-header-cell *matHeaderCellDef> UserName</mat-header-cell>
+            <mat-cell *matCellDef="let user"> {{user.heartrate}}</mat-cell>
+        </ng-container>
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+    </mat-table>
+</div>
