@@ -16,8 +16,6 @@ import { MatTableModule } from '@angular/material';
 @NgModule({
   declarations: [
     AppComponent,
-    CardComponent,
-    CardListComponent,
     DatatableComponent
   ],
   imports: [
