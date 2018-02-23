@@ -16,6 +16,9 @@ export class AppComponent {
     .subscribe(res =>{
       ///map data here
 
+        let heartRate = res
+        let steps = res
+        let watchData = []
     })
 
     .this.chart = new Chart('canvas', {
@@ -24,12 +27,32 @@ export class AppComponent {
         labels:  watchData,
         datasets: [
           {
-            data: hearRate,
-            borderColor: '#3cba9f'  
-          }
+            data: heartRate,
+            borderColor: '#3cba9f',
+            fill: false
+          },
+          {
+            data: steps,
+            borderColor: '#3cba9f',
+            fill: false
+          },
         ]
+      },
+      options: {
+        legend: {
+          display: false
+        },
+        scales: {
+          xAxes: [{
+            display: true
+          }], 
+          yAxes: [{
+            display: true
+          }]
+        }
+        }
       }
-    })
+    )
 
   }
 }
